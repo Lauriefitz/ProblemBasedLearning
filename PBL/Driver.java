@@ -53,7 +53,7 @@ public class Driver {
   }
 
   public Driver() {
-    // Initialising all the variables.
+    // Initializing all the variables.
     this.input = new Scanner(System.in);
     this.players = new ArrayList<Player>();
     this.turns = 1;
@@ -86,10 +86,10 @@ public class Driver {
   }
 
   public void takeLoan(Player player) {
-    System.out.println(Player.getName() + ", how much loan do you want to take out?");
+    System.out.println(player.getName() + ", how much loan do you want to take out?");
     for (int i = 0; i < 8; i++) {
       // a + (n - 1) * d Formula to calculate the loan (0.5 mil to 4 mil).
-      int sum = 0.5 + (i) * 0.5;
+      double sum = 0.5 + (i) * 0.5;
       System.out.println(i + ") Take out " + sum + " million.");
     }
     boolean goodInput = false;
@@ -102,9 +102,9 @@ public class Driver {
           System.out.println("Please put a valid number between 0 and 8.");
           option = input.nextInt();
         }
-        if ((round > 0 && option <= 8) || (round == 0 && option <= 1)) {
-          int sum = (0.5 + (option) * 0.5) * 1000000;
-          player.setCash(player.getCash() + sum);
+        if ((rounds > 0 && option <= 8) || (rounds == 0 && option <= 1)) {
+        	double sum = (0.5 + (option) * 0.5) * 1000000;
+        	player.setCash(player.getCash() + sum);
         }
         goodInput = true;
       } catch (Exception e) {

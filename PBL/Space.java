@@ -8,7 +8,7 @@ public class Space {
   private String quadrant;
   private int index;
 
-  private Player owner = "";
+  private String owner = "";
   private ArrayList<String> seen; // To check who can look at the BlueCard freely.
   private BlueCard card; // Each Space will have an assigned BlueCard to them.
   private boolean bought; // Checking if a drill concession is bought aka ownership token.
@@ -18,7 +18,7 @@ public class Space {
     this.setQuadrant(quadrant);
     this.setIndex(index);
 
-    this.seen = new ArrayList<Player>();
+    this.seen = new ArrayList<String>();
     this.setCard(new BlueCard());
     this.setBought(false);
     this.destroyRig();
@@ -26,7 +26,7 @@ public class Space {
 
   public Space(String owner, String quadrant, int index) {
     this.setOwner(owner);
-    this.Space(String quadrant, int index);
+    this.Space(quadrant, index);
   }
 
   // Put this in Driver.java;
@@ -63,7 +63,7 @@ public class Space {
     return this.owner;
   }
 
-  public String getSeen() {
+  public ArrayList<String> getSeen() {
     return this.seen;
   }
 
