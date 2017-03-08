@@ -4,10 +4,10 @@
 public class Player {
   private String name;
 
-  private int cash;
-  private int debt;
+  private double cash;
+  private double debt;
 
-  public Player(name) {
+  public Player(String name) {
     this.name = name;
     this.cash = 0;
     this.debt = 0;
@@ -17,19 +17,19 @@ public class Player {
     return this.name;
   }
 
-  public int getCash() {
+  public double getCash() {
     return this.cash;
   }
 
-  public int getDebt() {
+  public double getDebt() {
     return this.debt;
   }
 
-  public void setCash(int cash) {
+  public void setCash(double cash) {
     this.cash = cash;
   }
 
-  public void setDebt(int debt) {
+  public void setDebt(double debt) {
     this.debt = debt;
   }
 }
