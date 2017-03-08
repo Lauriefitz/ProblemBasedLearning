@@ -53,7 +53,7 @@ public class Driver {
   }
 
   public Driver() {
-    // Initialising all the variables.
+    // Initializing all the variables.
     this.input = new Scanner(System.in);
     this.players = new ArrayList<Player>();
     this.turns = 1;
